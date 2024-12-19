@@ -1,0 +1,44 @@
+
+MONGODB_CONNECTION_STRING=mongodb+srv://syfuddhin:LvRXmvJoKeCgHeNN@ecom.jmhzt.mongodb.net/next-ecomerse
+
+
+
+# JWT_SECRET_KEY=d5bd2b1507ddf3ea1ca50e8abed3938229b3771a098d8853e5ab1e685c6b6312
+# JWT_ISSUER=677b312d4ed182beec53f4952ddf52f9213b3e576f1550de23988ab6f7c57ae6
+# JWT_EXPIRE_TIME=24h
+# COOKIE_NAME=next-news-portal
+# COOKIE_SECRET=f0f24a430b35b173daf0751a62048acb469a1fb81c5f5ae093d08a003862f6e5
+# RESEND_KEY=re_NwBDuyNz_9sAsB5BqxTqQ2na8aKYDnRdM
+
+
+
+
+
+# O AUTH 
+AUTH_SECRET=c6a63179ea334228393727cc404a3a504e1e8a35c6094c3b861e490f45152881
+
+
+MONGO_URI=mongodb+srv://syfuddhin:LvRXmvJoKeCgHeNN@ecom.jmhzt.mongodb.net/next-ecomerse
+MONGODB_CONNECTION_STRING=mongodb+srv://syfuddhin:LvRXmvJoKeCgHeNN@ecom.jmhzt.mongodb.net/next-ecomerse
+ENVIRONMENT=next-ecomerse
+
+
+# GOOGLE
+AUTH_GOOGLE_ID=404474690190-kiai91l43qvum56utf3ob49ljh9itekp.apps.googleusercontent.com
+AUTH_GOOGLE_SECRET=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
+GOOGLE_APP_PASSWORD=ohng pmze irjk byhh
+
+
+
+NEXT_PUBLIC_APP_URL_DEV=http://localhost:3000
+NEXT_PUBLIC_APP_URL_PRODUCTION=https://lwscart.vercel.app
+AUTH_TRUST_HOST=http://localhost:3000
+
+
+#cloudinary
+CLOUDINARY_CLOUD_NAME=dwe6gs8sp
+CLOUDINARY_API_KEY=434767569663527
+CLOUDINARY_API_SECRET=7FR7Wo1b1_VFTqBQ2fzZLk71lF8
+CLOUDINARY_URL=cloudinary://434767569663527:7FR7Wo1b1_VFTqBQ2fzZLk71lF8@dwe6gs8sp
+
+
