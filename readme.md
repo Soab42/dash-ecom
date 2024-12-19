@@ -2,7 +2,8 @@
 
 A comprehensive admin dashboard built with Next.js for managing e-commerce operations. This panel provides complete control over products, orders, users, and analytics with a modern, responsive interface.
 
-![Admin Panel Preview](/api/placeholder/800/400)
+![image](https://github.com/user-attachments/assets/8f9b7de2-01b8-43ef-949d-c0cd1606ea50)
+
 
 ## Features
 
@@ -54,7 +55,7 @@ A comprehensive admin dashboard built with Next.js for managing e-commerce opera
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/ecommerce-admin.git
+git clone https://github.com/Soab42/dash-ecom.git
 cd ecommerce-admin
 ```
 
