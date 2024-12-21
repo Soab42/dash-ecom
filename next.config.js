@@ -2,18 +2,18 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async rewrites() {
-    return [
-      {
-        source: "/api/auth/:path*",
-        destination: "/api/auth/:path*",
-      },
-      {
-        source: "/api/:path*",
-        destination: "https://kabbomobileshopapi.vercel.app/api/:path*",
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/auth/:path*",
+  //       destination: "/api/auth/:path*",
+  //     },
+  //     {
+  //       source: "/api/:path*",
+  //       destination: "https://kabbomobileshopapi.vercel.app/api/:path*",
+  //     },
+  //   ];
+  // },
   async headers() {
     return [
       {

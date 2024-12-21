@@ -81,7 +81,7 @@ export default function NavSideBar({ setIsCollapsed, isCollapsed, isSmall }) {
           width={175}
           height={25}
           alt="logo"
-          src="https://res.cloudinary.com/djrwougmx/image/upload/v1733148573/zffg4fujy7ntnnwwrs6g.png"
+          src="https://res.cloudinary.com/dwe6gs8sp/image/upload/v1734710404/ecom_xravvy.png"
         />
       </div>
 

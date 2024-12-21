@@ -14,7 +14,7 @@ const RootLayout = async ({ children }) => {
       <head>
         <link
           rel="icon"
-          href="https://res.cloudinary.com/djrwougmx/image/upload/v1733326312/E0Aik10_azlclg.jpg"
+          href="https://res.cloudinary.com/dwe6gs8sp/image/upload/v1734704694/ecom_nrtlmo.png"
           sizes="any"
         />
       </head>

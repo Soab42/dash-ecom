@@ -35,9 +35,6 @@ const DashboardLoginForm = () => {
         className="max-w-md mx-auto bg-white shadow-lg rounded-lg p-8"
         onSubmit={handleSubmit}
       >
-        <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
-          Dashboard Login
-        </h2>
         <div className="mb-4">
           <label
             htmlFor="username"
@@ -50,6 +47,7 @@ const DashboardLoginForm = () => {
             name="username"
             type="text"
             required
+            defaultValue={"admin"}
             className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="Enter your username"
           />
@@ -66,6 +64,7 @@ const DashboardLoginForm = () => {
             id="password"
             name="password"
             type="password"
+            defaultValue={"admin"}
             required
             className="w-full px-4 py-2 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             placeholder="Enter your password"
@@ -83,13 +82,6 @@ const DashboardLoginForm = () => {
           />
           {loading ? "signing in" : "Sign in"}
         </button>
-
-        <p className="text-sm text-center text-gray-500 mt-4">
-          Forgot your password?{" "}
-          <a href="#" className="text-indigo-600 hover:underline">
-            Reset it here
-          </a>
-        </p>
       </form>
     </>
   );
