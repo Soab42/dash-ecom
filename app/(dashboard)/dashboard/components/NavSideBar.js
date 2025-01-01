@@ -12,6 +12,7 @@ import DarkMood from "./ui/DarkMood";
 import { logout } from "@/app/actions";
 import Image from "next/image";
 import { ShoppingBasket } from "lucide-react";
+import { BiSupport } from "react-icons/bi";
 
 export default function NavSideBar({ setIsCollapsed, isCollapsed, isSmall }) {
   const { data: session } = useSession();
@@ -58,6 +59,11 @@ export default function NavSideBar({ setIsCollapsed, isCollapsed, isSmall }) {
       href: "https://www.kabbomobileshop.com",
       icon: <ShoppingBasket className="w-6 h-6" />,
       label: "Shop",
+    },
+    {
+      href: "/dashboard/support",
+      icon: <BiSupport className="w-6 h-6" />,
+      label: "Support",
     },
   ];
 

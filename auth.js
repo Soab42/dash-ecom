@@ -45,7 +45,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           (await bcrypt.compare(credentials.password, user.password))
         ) {
           await createSession({
-            id: user.id,
+            id: user._id,
             username: user.username,
             email: user.email,
             phone: user.phone,
@@ -53,7 +53,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             name: user.first_name + " " + user.last_name,
           });
           return {
-            id: user.id,
+            id: user._id,
             username: user.username,
             email: user.email,
             phone: user.phone,
