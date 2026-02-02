@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import {
   get,
   onValue,
@@ -7,27 +7,27 @@ import {
   serverTimestamp,
   set,
   update,
-} from "firebase/database";
-import { auth, db } from "../../Firebase";
+} from 'firebase/database';
+import { auth, db } from '../../Firebase';
 
 export default function Seach() {
   const [userlist, setUserlist] = useState();
   const [user, setUser] = useState();
   const searchref = useRef(null);
   useEffect(() => {
-    const dataref = ref(db, "user");
-    onValue(query(dataref), (snapshot) => {
+    const dataref = ref(db, 'user');
+    onValue(query(dataref), snapshot => {
       setUserlist(Object.values(snapshot.val()));
     });
   }, []);
   // console.log(userlist.filter((a) => a));
-  const search = (e) => {
+  const search = e => {
     e.preventDefault();
 
     const userf = userlist.filter(
-      (a) =>
+      a =>
         searchref.current.value &&
-        a.name.toLocaleLowerCase().includes(searchref.current.value)
+        a.name.toLocaleLowerCase().includes(searchref.current.value),
     );
     setUser(userf);
   };
@@ -40,26 +40,27 @@ export default function Seach() {
   // };
 
   return (
-    <form className="z-[1000]" onSubmit={"search"}>
+    <form className="z-[1000]" onSubmit={'search'}>
       <input
         className="rounded-full h-8 w-max px-3  text-sm bg-transparent outline-none ring-1 ring-black"
-        type={"text"}
+        type={'text'}
         ref={searchref}
         onKeyUp={search}
-        placeholder={"search....."}
+        placeholder={'search.....'}
       />
       <div>
         {user &&
-          user.map((x) => (
+          user.map(x => (
             <div
+              key={x.id}
               className="bg-sky-800 mt-1 flex justify-start p-2 gap-2 rounded-lg text-white hover:bg-sky-500 cursor-pointer"
               onClick={async () => {
                 const combindID =
                   auth.currentUser.uid > x.id
                     ? auth.currentUser.uid + x.id
                     : x.id + auth.currentUser.uid;
-                await set(ref(db, "chat/" + combindID), { massege: "" });
-                await update(ref(db, "userchat/" + x.id + "/" + combindID), {
+                await set(ref(db, 'chat/' + combindID), { massege: '' });
+                await update(ref(db, 'userchat/' + x.id + '/' + combindID), {
                   userinfo: {
                     uid: auth.currentUser.uid,
                     name: auth.currentUser.displayName,
@@ -68,7 +69,7 @@ export default function Seach() {
                   date: serverTimestamp(),
                 });
                 await update(
-                  ref(db, "userchat/" + auth.currentUser.uid + "/" + combindID),
+                  ref(db, 'userchat/' + auth.currentUser.uid + '/' + combindID),
                   {
                     userinfo: {
                       uid: x.id,
@@ -76,7 +77,7 @@ export default function Seach() {
                       image: x.image,
                     },
                     date: serverTimestamp(),
-                  }
+                  },
                 );
                 searchref.current.value = null;
                 setUser(null);
