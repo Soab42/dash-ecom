@@ -1,32 +1,33 @@
-import { onValue, query, ref } from "firebase/database";
-import React, { useEffect, useRef, useState } from "react";
-import { db } from "../../Firebase";
-import Textmsg from "./Textmsg";
+import { onValue, query, ref } from 'firebase/database';
+import React, { useEffect, useRef, useState } from 'react';
+import { db } from '../../Firebase';
+import Textmsg from './Textmsg';
 
 export default function Messege({ id }) {
   const [massege, setMassege] = useState([]);
   const scrollref = useRef(null);
   useEffect(() => {
-    const dbref = ref(db, "chat/" + id + "/messege");
+    const dbref = ref(db, 'chat/' + id + '/messege');
     const dbquery = query(dbref);
-    onValue(dbquery, (snapshot) => {
+    onValue(dbquery, snapshot => {
       setMassege(snapshot.val());
     });
   }, [id]);
   useEffect(() => {
-    scrollref.current.scrollIntoView({ behavior: "smooth" });
+    scrollref.current.scrollIntoView({ behavior: 'smooth' });
   }, [massege]);
 
   // console.log(Object.entries(massege));
   return (
     <div className="">
       {massege ? (
-        Object.entries(massege).map((x) => {
+        Object.entries(massege).map(x => {
           // console.log(x);
           let { text, time, username, img, userimg } = x[1];
 
           return (
             <Textmsg
+              key={x.id}
               text={text}
               img={img}
               time={time}
